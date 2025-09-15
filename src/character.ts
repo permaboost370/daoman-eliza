@@ -36,7 +36,7 @@ export const character: Character = {
       && process.env.TWITTER_ACCESS_TOKEN_SECRET?.trim()
       ? ['@elizaos/plugin-x']
       : []),
-    ...(process.env.TELEGRAM_BOT_TOKEN?.trim() ? ['telegram'] : []),
+    ...(process.env.TELEGRAM_BOT_TOKEN?.trim() ? ['plugin-telegram'] : []),
 
     // Bootstrap
     ...(!process.env.IGNORE_BOOTSTRAP ? ['@elizaos/plugin-bootstrap'] : []),
