@@ -16,24 +16,6 @@ export const character: Character = {
   modelProvider: 'openai',
   name: 'Dao-Man',
 
-  // === Automatic Actions (scheduled) =========================================
-  actions: [
-    {
-      name: 'x-thought',
-      description: 'Post a concise one-liner to X',
-      trigger: {
-        type: 'schedule',
-        cron: '*/15 * * * *',     // every 15 minutes
-        timezone: 'Europe/Athens' // adjust if needed
-      },
-      action: 'post',
-      params: {
-        platform: 'x',
-        maxLength: 220,
-      },
-    },
-  ],
-
   plugins: [
     '@elizaos/plugin-sql',
 
@@ -48,12 +30,12 @@ export const character: Character = {
 
     // Platforms
     ...(process.env.DISCORD_BOT_TOKEN?.trim() ? ['@elizaos/plugin-discord'] : []),
-
-    // ✅ X (Twitter) — username/password ONLY, using the published package name
-    ...(process.env.TWITTER_USERNAME?.trim() && process.env.TWITTER_PASSWORD?.trim()
-      ? ['@elizaos/plugin-twitter']
+    ...(process.env.TWITTER_USERNAME?.trim()
+      && process.env.TWITTER_PASSWORD?.trim()
+      && process.env.TWITTER_ACCESS_TOKEN?.trim()
+      && process.env.TWITTER_ACCESS_TOKEN_SECRET?.trim()
+      ? ['@elizaos/plugin-x']
       : []),
-
     ...(process.env.TELEGRAM_BOT_TOKEN?.trim() ? ['@elizaos/plugin-telegram'] : []),
 
     // Bootstrap
