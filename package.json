@@ -6,26 +6,13 @@
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",
   "types": "dist/index.d.ts",
-  "keywords": [
-    "project",
-    "elizaos"
-  ],
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
+  "keywords": ["project", "elizaos"],
+  "repository": { "type": "git", "url": "" },
   "exports": {
     "./package.json": "./package.json",
-    ".": {
-      "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/src/index.js"
-      }
-    }
+    ".": { "import": { "types": "./dist/index.d.ts", "default": "./dist/src/index.js" } }
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "dependencies": {
     "@elizaos/cli": "1.5.8",
     "@elizaos/client": "1.5.8",
@@ -45,8 +32,7 @@
     "zod": "3.24.2",
 
     "@elizaos/plugin-discord": "latest",
-    "@elizaos/plugin-x": "github:elizaOS/plugin-x",
-    "@elizaos/plugin-ccxt": "github:elizaOS/plugin-ccxt"
+    "@elizaos/plugin-twitter": "latest"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
@@ -80,8 +66,6 @@
     "cypress:open": "bun run test:install && cypress open",
     "build:watch": "bun run build.ts --watch"
   },
-  "publishConfig": {
-    "access": "public"
-  },
+  "publishConfig": { "access": "public" },
   "gitHead": "b165ad83e5f7a21bc1edbd83374ca087e3cd6b33"
 }
