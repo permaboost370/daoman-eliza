@@ -44,9 +44,9 @@
     "tailwindcss": "^4.1.10",
     "zod": "3.24.2",
 
-    "@elizaos/plugin-x": "latest",
     "@elizaos/plugin-discord": "latest",
-    "@elizaos/plugin-ccxt": "latest"
+    "@elizaos/plugin-x": "github:elizaOS/plugin-x",
+    "@elizaos/plugin-ccxt": "github:elizaOS/plugin-ccxt"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
