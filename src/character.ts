@@ -33,7 +33,7 @@ export const character: Character = {
     ...(process.env.TWITTER_USERNAME?.trim()
       && process.env.TWITTER_PASSWORD?.trim()
       && process.env.TWITTER_EMAIL.trim()
-      ? ['@elizaos/plugin-x']
+      ? ['@elizaos/plugin-twitter']
       : []),
     ...(process.env.TELEGRAM_BOT_TOKEN?.trim() ? ['@elizaos/plugin-telegram'] : []),
 
